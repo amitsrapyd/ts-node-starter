@@ -1,3 +1,7 @@
+[![ts](https://badgen.net/badge/-/node?icon=typescript&label&labelColor=blue&color=555555)](https://github.com/TypeStrong/ts-node)
+[<img src="https://img.shields.io/badge/-ESLint-4B32C3.svg?logo=ESlint">](https://eslint.org/)
+[![Husky](https://img.shields.io/static/v1?label=Formated+by&message=Prettier&color=ff69b4)](https://github.com/prettier/prettier)
+[![Husky](https://img.shields.io/static/v1?label=Hooked+by&message=Husky&color=success)](https://typicode.github.io/husky)
 # Node.js TS 
 ## ESM starter kit
 
@@ -19,6 +23,9 @@ An easier alternative you may consider is to simply dompile everything to Common
   
 This setup is only relevant if it is important for you to be standard complient with ESNext and specifically with EcmaScript Modules (ESM) running natively in the Node.js runtime. 
 
+
+### linting
+**`eslint`** **`prettier`** and **`husky`** are included
 
 
 
