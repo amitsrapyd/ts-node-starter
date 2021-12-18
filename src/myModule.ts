@@ -1,4 +1,4 @@
 
 export function saySomething(msg:string){
-    return `${msg} to you too :)`
+    return `${msg} to you too :)`;
 }
