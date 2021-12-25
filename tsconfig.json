@@ -12,6 +12,8 @@
     "tsBuildInfoFile": "./.buildcache/todos.tsbuildinfo",
     "noEmitOnError": true,
     "declaration": true,
-    "declarationDir": "./typings"    
-  }
+    "declarationDir": "./typings",
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "tests"]
 }
