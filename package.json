@@ -13,7 +13,7 @@
         "format": "prettier src/**/*.ts --write",
         "prepare": "husky install"
     },
-    "keywords": [],
+    "keywords": ["node.js","typescript","ts-node","eslint","prettier","husky"],
     "author": {
         "name": "Yariv Gilad",
         "email": "yariv.gilad@gmail.com",
