@@ -15,5 +15,4 @@
     "declarationDir": "./typings",
   },
   "include": ["src"],
-  "exclude": ["node_modules", "tests"]
 }
