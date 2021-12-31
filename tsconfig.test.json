@@ -1,5 +1,7 @@
 {
     "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "rootDir": "." // at test time, change the root dir to include the tests folder,
+    },
     "include": ["."]
 }
-  

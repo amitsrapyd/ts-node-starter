@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
     "incremental": true,
+    "tsBuildInfoFile": "./.buildcache/info.tsbuildinfo",
     "strict": true,
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./src", // this needs to be changed during test
     "moduleResolution": "node",
     "esModuleInterop": true, 
     "allowSyntheticDefaultImports": true,
-    "tsBuildInfoFile": "./.buildcache/todos.tsbuildinfo",
     "noEmitOnError": true,
     "declaration": true,
-    "declarationDir": "./typings",
+    "declarationDir": "./types"
   },
-  "include": ["src"],
+  "include": ["src"]
 }

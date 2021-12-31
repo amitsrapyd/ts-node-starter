@@ -1,29 +1,25 @@
-import { expect } from "chai";
-import { sum, multiply } from "../src/calc";
+import { expect } from 'chai';
+import { sum, multiply } from '../src/calc';
 
+describe('The calc module', () => {
+  context('#sum', () => {
+    it('should exist', () => {
+      expect(sum).to.be.a('function');
+      expect(sum).to.be.instanceOf(Function);
+    });
 
-describe('The calc module',  ()=> {
+    it('should sum two numbers', () => {
+      const actual = sum(2, 3);
+      expect(actual).to.equal(5);
+    });
 
-    context(`#sum`,()=> {
-        
-        it(`should exist`,()=> {
-            expect(sum).to.be.a('function')
-            expect(sum).to.be.instanceOf(Function)
-        })
+    it('should sum several numbers', () => {
+      const actual = sum(2, 3, 4, 5, 6);
+      expect(actual).to.equal(20);
+    });
+  });
 
-        it(`should sum two numbers`,()=> {
-            let actual = sum(2,3);
-            expect(actual).to.equal(5)
-        })
-
-        it(`should sum several numbers`,()=> {
-            let actual = sum(2,3,4,5,6);
-            expect(actual).to.equal(20)
-        })
-
-    })
-
-    /* context(`#multiply`,()=> {
+  /* context(`#multiply`,()=> {
 
         it(`should exist`) // <-- pending...
         
@@ -38,34 +34,31 @@ describe('The calc module',  ()=> {
         })
 
     }) */
-    context(`#multiply`,()=> {
+  context('#multiply', () => {
+    it('should exist', () => {
+      expect(sum).to.be.a('function');
+      expect(sum).to.be.instanceOf(Function);
+    });
 
-        it(`should exist`,()=> {
-            expect(sum).to.be.a('function')
-            expect(sum).to.be.instanceOf(Function)
-        })
+    it('should multiply two numbers', () => {
+      const actual = multiply(2, 3);
+      expect(actual).to.deep.equal([6]);
+    });
 
-        it(`should multiply two numbers`,()=> {
-            let actual = multiply(2,3);
-            expect(actual).to.deep.equal([6])
-        })
+    it('should muliply several numbers', () => {
+      const actual = multiply(2, 3, 4, 5, 6);
+      expect(actual).to.eql([6, 8, 10, 12]);
+    });
+  });
 
-        it(`should muliply several numbers`,()=> {
-            let actual = multiply(2,3,4,5,6);
-            expect(actual).to.eql([6,8,10,12])
-        })
+  context('#async tests', () => {
+    const delay = (ms: number) =>
+      new Promise((resolve) => setTimeout(resolve, ms));
 
-    })
-    
-    context(`#async tests`, ()=> {
-        const delay = (ms:number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-        it(`should muliply several numbers with delay`, async ()=> {
-            await delay(300);
-            let actual = multiply(2,3,4,5,6);
-            expect(actual).to.deep.equal([6,8,10,12])
-        })
-    })
-
+    it('should muliply several numbers with delay', async () => {
+      await delay(300);
+      const actual = multiply(2, 3, 4, 5, 6);
+      expect(actual).to.deep.equal([6, 8, 10, 12]);
+    });
+  });
 });
-
